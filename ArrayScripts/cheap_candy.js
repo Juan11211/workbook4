@@ -36,6 +36,7 @@ for(let i = 0; i < products.length; i++){
 //     }
 // }
 
+
 for (let i = 0; i < products.length; i++) {
     if (products[i].product.indexOf("Swedish Fish") !== -1) {
         console.log("We don't carry that.");
