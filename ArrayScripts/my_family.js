@@ -2,4 +2,6 @@
 
 const familyMembers = ["Juan", "Kristina", "Elijah", "Liliana"]
 
-console.log(familyMembers)
+for(let i = 0; i < familyMembers.length; i++){
+    console.log(familyMembers[i]);
+}
