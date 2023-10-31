@@ -36,16 +36,9 @@ for(let i = 0; i < products.length; i++){
 //     }
 // }
 
-let found = false;
-
 for (let i = 0; i < products.length; i++) {
     if (products[i].product.indexOf("Swedish Fish") !== -1) {
-        break; // Exit the loop once found
+        console.log("We don't carry that.");
     }
 }
 
-if (found) {
-    console.log("Yes, we do carry Swedish Fish.");
-} else {
-    console.log("We don't carry that.");
-}
