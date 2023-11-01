@@ -28,18 +28,22 @@ for(let i = 0; i < products.length; i++){
         console.log(`These products are labeled with M&M: ${products[i].product}`)
     }
 }
-// Do we carry "Swedish Fish"?
 
-// for(let i = 0; i < products.length; i++){
-//     if(products[i].product === "Swedish Fish" ){
-//         console.log(`This product does not exist`)
-//     }
-// }
+//DO WE CARRY SWEDISH FISH
 
+let foundSwedishFish = false;
 
 for (let i = 0; i < products.length; i++) {
-    if (products[i].product.indexOf("Swedish Fish") !== -1) {
-        console.log("We don't carry that.");
+    if (products[i].product === "Swedish Fish") {
+        foundSwedishFish = true;
+        console.log(`We have ${products[i].product} - it costs ${products[i].price}`);
+        break;
     }
 }
+
+if (!foundSwedishFish) {
+    console.log("We don't carry that.");
+}
+
+
 

@@ -40,31 +40,31 @@ let courses = [
 
 
 // When does the PROG200 course start?
-// for (let i = 0; i < courses.length; i++) {
-//     if (courses[i].CourseId === "PROG200") {
-//         console.log(courses[i].StartDate);
-//         break; 
-//     }
-// }
-
-for (let i = 0; i < courses.length; i++){
-    if(courses[i].CourseId.indexOf("PROG200") !== -1){
-        console.log(courses[i].StartDate)
-    }
-}
-// What is the title of the PROJ500 course?
-// for (let i = 0; i < courses.length; i++) {
-//     if (courses[i].CourseId === "PROJ500") {
-//         console.log(courses[i].Title);
-//         break; 
-//     }
-// }
-
 for (let i = 0; i < courses.length; i++) {
-    if (courses[i].CourseId.indexOf("PROJ500") !== -1) {
-        console.log(courses[i].Title);
+    if (courses[i].CourseId === "PROG200") {
+        console.log(courses[i].StartDate);
+        break; 
     }
 }
+
+// for (let i = 0; i < courses.length; i++){
+//     if(courses[i].CourseId.indexOf("PROG200") !== -1){
+//         console.log(courses[i].StartDate)
+//     }
+// }
+// What is the title of the PROJ500 course?
+for (let i = 0; i < courses.length; i++) {
+    if (courses[i].CourseId === "PROJ500") {
+        console.log(courses[i].Title);
+        break; 
+    }
+}
+
+// for (let i = 0; i < courses.length; i++) {
+//     if (courses[i].CourseId.indexOf("PROJ500") !== -1) {
+//         console.log(courses[i].Title);
+//     }
+// }
 
 // What are the titles of the courses that cost $50 or less?
 for(let i = 0; i < courses.length; i++){
@@ -74,13 +74,13 @@ for(let i = 0; i < courses.length; i++){
 }
 
 // What classes meet in "Classroom 1"?
-// for(let i = 0; i < courses.length; i++){
-//     if(courses[i].Location === "Classroom 1"){
-//         console.log(` These classes are located in Classroom 1: ${courses[i].Title}`)
-//     }
-// }
-for (let i = 0; i < courses.length; i++) {
-    if (courses[i].Location.indexOf("Classroom 1") !== -1) {
-        console.log(`These classes are located in Classroom 1: ${courses[i].Title}`);
+for(let i = 0; i < courses.length; i++){
+    if(courses[i].Location === "Classroom 1"){
+        console.log(` These classes are located in Classroom 1: ${courses[i].Title}`)
     }
 }
+// for (let i = 0; i < courses.length; i++) {
+//     if (courses[i].Location.indexOf("Classroom 1") !== -1) {
+//         console.log(`These classes are located in Classroom 1: ${courses[i].Title}`);
+//     }
+// }
