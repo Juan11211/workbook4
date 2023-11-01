@@ -65,11 +65,11 @@ let vehicles = [
     ];
 
     // Which vehicles are RED?
-    // for(let i = 0; i < vehicles.length; i++ ){
-    //     if(vehicles[i].color.indexOf("Red") !== -1 ){
-    //         console.log(`These vehicles are the color red: ${vehicles[i].type}`)
-    //     } 
-    // }
+    for(let i = 0; i < vehicles.length; i++ ){
+        if(vehicles[i].color.indexOf("Red") !== -1 ){
+            console.log(`These vehicles are the color red: ${vehicles[i].type}`)
+        } 
+    }
 
     // for(let i = 0; i < vehicles.length; i++){
     //     if(vehicles[i].color === 'Red'){
@@ -100,7 +100,17 @@ for(let i = 0; i < vehicles.length; i++){
 // Which vehicles have license plates that end with "222"?
 
 for (let i = 0; i < vehicles.length; i++) {
-    if (vehicles[i].licenseNo.endsWith(222)) {
-        console.log(`This vehicle licenseNo ends in 222: ${vehicles[i].type} - licenseNo ${vehicles[i].licenseNo}`);
+    const licenseNo = vehicles[i].licenseNo;
+    
+    if (licenseNo && typeof licenseNo === 'string') {
+        const lastIndex = licenseNo.indexOf('-');
+        if (lastIndex !== -1 && licenseNo.substring(lastIndex + 1) === "222") {
+            console.log(`This vehicle licenseNo ends in 222: ${vehicles[i].type} - licenseNo ${vehicles[i].licenseNo}`);
+        }
     }
 }
+
+
+
+
+
