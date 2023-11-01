@@ -51,13 +51,14 @@ for(let i = 0; i < academyMembers.length; i++){
 
 // HARDER: Which Academy Members have been in a film that starts with "A"
 
-const membersWithFilmStartingWithA = [];
+let membersWithFilmStartingWithA = []
 
 for (let i = 0; i < academyMembers.length; i++) {
     let filmNames = academyMembers[i].films;
 
     for (let j = 0; j < filmNames.length; j++) {
-        if (filmNames[j].startsWith("A")) {
+        // if (filmNames[j].indexOf("A") === 0)
+            if(filmNames[j].charAt(0) === "A"){
             membersWithFilmStartingWithA.push(academyMembers[i].name);
             break;
         }
